@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Axios from "axios";
+import axios from "axios";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -59,9 +59,9 @@ const Info = (props) => {
   const [movieInfo, setMovieInfo] = useState();
   const { selectMovie } = props;
   useEffect(() => {
-    Axios.get(`https://www.omdbapi.com/?s=${selectMovie}&apikey=31912ee0`).then(
-      (response) => setMovieInfo(response.data)
-    );
+    axios
+      .get(`https://www.omdbapi.com/?i=${selectMovie}&apikey=31912ee0`)
+      .then((response) => setMovieInfo(response.data));
   }, [selectMovie]);
   return (
     <>

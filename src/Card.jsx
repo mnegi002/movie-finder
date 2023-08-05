@@ -38,6 +38,7 @@ const MovieInfo = styled.span`
 
 const Card = (props) => {
   const { Title, Year, imdbID, Type, Poster } = props.movie;
+ 
   return (
     <>
       <MovieContainer onClick={() => props.onMovieSelect(imdbID)}>

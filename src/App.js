@@ -40,9 +40,9 @@ export default function App() {
           />
         </div>
       </div>
-      {selectMovie && (
+      {selectMovie && 
         <Info selectMovie={selectMovie} onMovieSelect={onMovieSelect} />
-      )}
+      }
       <div className="container">
         {movieList?.length
           ? movieList.map((movie, index) => (
